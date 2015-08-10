@@ -5,16 +5,22 @@
   
   <title>在hexo博客里安装duoshuo评论插件 | 冯小舟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先是为什么选择duoshuo插件呢？第一是它免费，而且是国人开发的，响应快更新快。第二是集成方便，只需要改动少量代码就可以了。">
+  <meta name="description" content="首先是选择duoshuo插件的理由：第一是它免费，而且是国人开发的，响应快更新快。第二是集成方便，只需要改动少量代码就可以。
+由于采用hexo建立的博客可能会存在多个_config.yml。一个是系统config.yml，一个是各个不同主题theme下的config.yml。
+增加duoshuo评论插件会修改config.yml。如果修改系统的config.yml，那么就对于所有的主题都生效。而修">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在hexo博客里安装duoshuo评论插件">
 <meta property="og:url" content="http://yoursite.com/2015/08/10/test-duoshuo/index.html">
 <meta property="og:site_name" content="冯小舟的博客">
-<meta property="og:description" content="首先是为什么选择duoshuo插件呢？第一是它免费，而且是国人开发的，响应快更新快。第二是集成方便，只需要改动少量代码就可以了。">
-<meta property="og:updated_time" content="2015-08-10T07:46:14.782Z">
+<meta property="og:description" content="首先是选择duoshuo插件的理由：第一是它免费，而且是国人开发的，响应快更新快。第二是集成方便，只需要改动少量代码就可以。
+由于采用hexo建立的博客可能会存在多个_config.yml。一个是系统config.yml，一个是各个不同主题theme下的config.yml。
+增加duoshuo评论插件会修改config.yml。如果修改系统的config.yml，那么就对于所有的主题都生效。而修">
+<meta property="og:updated_time" content="2015-08-10T08:03:09.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在hexo博客里安装duoshuo评论插件">
-<meta name="twitter:description" content="首先是为什么选择duoshuo插件呢？第一是它免费，而且是国人开发的，响应快更新快。第二是集成方便，只需要改动少量代码就可以了。">
+<meta name="twitter:description" content="首先是选择duoshuo插件的理由：第一是它免费，而且是国人开发的，响应快更新快。第二是集成方便，只需要改动少量代码就可以。
+由于采用hexo建立的博客可能会存在多个_config.yml。一个是系统config.yml，一个是各个不同主题theme下的config.yml。
+增加duoshuo评论插件会修改config.yml。如果修改系统的config.yml，那么就对于所有的主题都生效。而修">
   
     <link rel="alternative" href="/atom.xml" title="冯小舟的博客" type="application/atom+xml">
   
@@ -203,7 +209,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>首先是为什么选择duoshuo插件呢？第一是它免费，而且是国人开发的，响应快更新快。第二是集成方便，只需要改动少量代码就可以了。</p>
+        <p>首先是选择duoshuo插件的理由：第一是它免费，而且是国人开发的，响应快更新快。第二是集成方便，只需要改动少量代码就可以。</p>
+<p>由于采用hexo建立的博客可能会存在多个_config.yml。一个是系统config.yml，一个是各个不同主题theme下的config.yml。</p>
+<p>增加duoshuo评论插件会修改config.yml。如果修改系统的config.yml，那么就对于所有的主题都生效。而修改theme\config.yml，只会对该主题生效。</p>
+<p>一、修改系统config.yml<br>  1、在_config.yml中添加多说的配置：<br>     duoshuo_shortname: 你站点的short_name<br>  2、修改themes\landscape\layout_partial\article.ejs文件。</p>
 
       
     </div>
