@@ -5,38 +5,38 @@
   
   <title>在hexo博客里安装duoshuo评论插件 | 冯小舟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="博客中集成多说评论选择多说的原因
+  <meta name="description" content="在博客中集成多说评论选择多说的原因
 
 集成方便，只需要添加一点代码，做少量修改就可以使用。
 可以与多个社交软件进行交互，利用社交软件账号就可以登录，然后评论，还可以转发。
 多说产品更新迭代非常快，很多蛋疼反馈也能及时解决。
 
 由于采用hexo建立的博客可能存在多个_config.yml。一个是系统自带的_config.yml，另外的是各个不同theme下的_config.yml。
-增加duoshuo">
+增加duoshu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在hexo博客里安装duoshuo评论插件">
 <meta property="og:url" content="http://yoursite.com/2015/08/10/test-duoshuo/index.html">
 <meta property="og:site_name" content="冯小舟的博客">
-<meta property="og:description" content="博客中集成多说评论选择多说的原因
+<meta property="og:description" content="在博客中集成多说评论选择多说的原因
 
 集成方便，只需要添加一点代码，做少量修改就可以使用。
 可以与多个社交软件进行交互，利用社交软件账号就可以登录，然后评论，还可以转发。
 多说产品更新迭代非常快，很多蛋疼反馈也能及时解决。
 
 由于采用hexo建立的博客可能存在多个_config.yml。一个是系统自带的_config.yml，另外的是各个不同theme下的_config.yml。
-增加duoshuo">
+增加duoshu">
 <meta property="og:image" content="http://7xl0b5.com1.z0.glb.clouddn.com/duoshuo.jpg">
-<meta property="og:updated_time" content="2015-08-11T02:57:45.256Z">
+<meta property="og:updated_time" content="2015-08-11T03:01:34.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在hexo博客里安装duoshuo评论插件">
-<meta name="twitter:description" content="博客中集成多说评论选择多说的原因
+<meta name="twitter:description" content="在博客中集成多说评论选择多说的原因
 
 集成方便，只需要添加一点代码，做少量修改就可以使用。
 可以与多个社交软件进行交互，利用社交软件账号就可以登录，然后评论，还可以转发。
 多说产品更新迭代非常快，很多蛋疼反馈也能及时解决。
 
 由于采用hexo建立的博客可能存在多个_config.yml。一个是系统自带的_config.yml，另外的是各个不同theme下的_config.yml。
-增加duoshuo">
+增加duoshu">
   
     <link rel="alternative" href="/atom.xml" title="冯小舟的博客" type="application/atom+xml">
   
@@ -225,7 +225,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="博客中集成多说评论">博客中集成多说评论</h2><p><strong>选择多说的原因</strong></p>
+        <h2 id="在博客中集成多说评论">在博客中集成多说评论</h2><p><strong>选择多说的原因</strong></p>
 <ul>
 <li>集成方便，只需要添加一点代码，做少量修改就可以使用。</li>
 <li>可以与多个社交软件进行交互，利用社交软件账号就可以登录，然后评论，还可以转发。</li>
@@ -241,9 +241,9 @@
 </blockquote>
 </li>
 <li><p><strong>修改article.ejs文件。</strong> article的路径是<code>themes\landscape\layout\_partial\article.ejs</code>。<br>把</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (!<span class="attribute">index</span> &amp;&amp; <span class="attribute">post.comments</span> &amp;&amp; <span class="attribute">config.disqus_shortname</span>)&#123; %&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;noscript&gt;Please enable JavaScript to view the &lt;a href="//disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">section</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (!<span class="attribute">index</span> &amp;&amp; <span class="attribute">post.comments</span> &amp;&amp; <span class="attribute">config.disqus_shortname</span>)&#123; %&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;div id="disqus_thread"&gt;</span></span><br><span class="line"><span class="code">      &lt;noscript&gt;Please enable JavaScript to view the &lt;a href="//disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span></span><br><span class="line"><span class="code">    &lt;/div&gt;</span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;/<span class="title">section</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>修改为</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (!<span class="attribute">index</span> &amp;&amp; <span class="attribute">post.comments</span> &amp;&amp; <span class="attribute">config.duoshuo_shortname</span>)&#123; %&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"&lt;%= post.layout %&gt;</span></span></span>-<span class="xml"><span class="tag"><span class="value">&lt;%= post.slug %&gt;</span></span></span>" data-title="<span class="xml"><span class="tag"><span class="value">&lt;%= post.title %&gt;</span></span></span>" data-url="<span class="xml"><span class="tag"><span class="value">&lt;%= page.permalink %&gt;</span></span></span>"&gt;<span class="xml"><span class="tag"><span class="value">&lt;/div&gt;</span></span></span></span><br><span class="line">  <span class="xml"><span class="tag"><span class="value">&lt;!-- 多说评论框 end --&gt;</span></span></span></span><br><span class="line">  <span class="xml"><span class="tag"><span class="value">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span></span></span><br><span class="line">  <span class="xml"><span class="tag"><span class="value">&lt;script type="</span><span class="value">text</span>/<span class="attribute">javascript</span>"&gt;</span></span></span><br><span class="line">  var duoshuoQuery = &#123;short<span class="emphasis">_name:'&lt;%= config.duoshuo_</span>shortname %&gt;'&#125;;</span><br><span class="line"><span class="code">    (function() &#123;</span></span><br><span class="line"><span class="code">      var ds = document.createElement('script');</span></span><br><span class="line"><span class="code">      ds.type = 'text/javascript';ds.async = true;</span></span><br><span class="line"><span class="code">      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';</span></span><br><span class="line"><span class="code">      ds.charset = 'UTF-8';</span></span><br><span class="line"><span class="code">      (document.getElementsByTagName('head')[0] </span></span><br><span class="line"><span class="code">       || document.getElementsByTagName('body')[0]).appendChild(ds);</span></span><br><span class="line"><span class="code">    &#125;)();</span></span><br><span class="line"><span class="code">    &lt;/script&gt;</span></span><br><span class="line">  <span class="xml"><span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">section</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>  修改完毕后，查看文章可以看到已经可以通过多说进行品论。<br>  <img src="http://7xl0b5.com1.z0.glb.clouddn.com/duoshuo.jpg" alt="多说评论"></p>
