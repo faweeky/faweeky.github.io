@@ -15,7 +15,7 @@
 2. Quantmod（Quantitative Financial &amp;amp; Trading Framework）Quantmod 包是R语言的一个函数库，提供了大量数据获取、数据分析和数据展示的函数。主要用于金融分析和建模。Quantmod获取数据的">
 <meta property="og:image" content="http://7xl0b5.com1.z0.glb.clouddn.com/chartSeries.jpg">
 <meta property="og:image" content="http://7xl0b5.com1.z0.glb.clouddn.com/macd.jpg">
-<meta property="og:updated_time" content="2015-08-13T04:51:50.577Z">
+<meta property="og:updated_time" content="2015-08-13T04:54:15.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用R语言的quantmod包获取并展示股票数据">
 <meta name="twitter:description" content="1. R语言R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，是用于统计计算和统计制图的优秀工具。
@@ -210,6 +210,7 @@
       
         <h4 id="1-_R语言"><strong>1. R语言</strong></h4><p>R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，是用于统计计算和统计制图的优秀工具。</p>
 <h4 id="2-_Quantmod（Quantitative_Financial_&amp;_Trading_Framework）"><strong>2. Quantmod（Quantitative Financial &amp; Trading Framework）</strong></h4><p>Quantmod 包是R语言的一个函数库，提供了大量数据获取、数据分析和数据展示的函数。主要用于金融分析和建模。<br>Quantmod获取数据的来源主要有两个：yahoo和google。最常用的是yahoo中的各种数据。<br>根据官方说明，目前quantmod主要的数据来源有</p>
+<a id="more"></a>
 <blockquote>
 <ol>
 <li>Yahoo! Finance (OHLC data)</li>
@@ -222,7 +223,6 @@
 <li>More to come including (RODBC,economagic,Rbloomberg,…)</li>
 </ol>
 </blockquote>
-<a id="more"></a>
 <p>但该包只能获取股票的历史交易记录信息：如OHLC(开盘价、最大值、最小值、收盘价)以及Vol(成交量)。该包无法获取个股的分笔交易明细历史记录。</p>
 <h4 id="3-_如何加载quantmod包"><strong>3. 如何加载quantmod包</strong></h4><p>如果还没有安装quantmod，那么需要在R语言运行环境中执行<code>install.packages(&#39;quantmod&#39;)</code>。<br>然后在每次启动R语言环境时，再执行<code>require(&#39;quantmod&#39;)</code>，引用quantmod包。</p>
 <h4 id="4-_如何获取在线数据"><strong>4. 如何获取在线数据</strong></h4><p>以yahoo的数据为例。例如我们要获取A股<strong>苏宁环球（000718）</strong>的历史交易数据。<br>可以执行下面这句代码:<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setSymbolLookup<span class="list">(<span class="keyword">GP=list</span><span class="list">(<span class="keyword">name=</span>'<span class="number">000718</span>.sz',src=<span class="quoted">'yahoo</span>')</span>)</span></span><br><span class="line">df = getSymbol<span class="list">(<span class="string">"GP"</span>)</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
