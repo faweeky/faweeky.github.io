@@ -207,21 +207,6 @@
 <li>More to come including (RODBC,economagic,Rbloomberg,…)</li>
 </ol>
 </blockquote>
-<p>但该包只能获取股票的历史交易记录信息：如OHLC(开盘价、最大值、最小值、收盘价)以及Vol(成交量)。该包无法获取个股的分笔交易明细历史记录。</p>
-<h4 id="3-_如何加载quantmod包"><strong>3. 如何加载quantmod包</strong></h4><p>如果还没有安装quantmod，那么需要在R语言运行环境中执行<code>install.packages(&#39;quantmod&#39;)</code>。<br>然后在每次启动R语言环境时，再执行<code>require(&#39;quantmod&#39;)</code>，引用quantmod包。</p>
-<h4 id="4-_如何获取在线数据"><strong>4. 如何获取在线数据</strong></h4><p>以yahoo的数据为例。例如我们要获取A股<strong>苏宁环球（000718）</strong>的历史交易数据。<br>可以执行下面这句代码:<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setSymbolLookup<span class="list">(<span class="keyword">GP=list</span><span class="list">(<span class="keyword">name=</span>'<span class="number">000718</span>.sz',src=<span class="quoted">'yahoo</span>')</span>)</span></span><br><span class="line">df = getSymbol<span class="list">(<span class="string">"GP"</span>)</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
-<p>注意到其中yahoo必须是<strong>小写</strong>。yahoo表示数据来源是yahoo，也可以写为google。经测试，发现yahoo数据比google较快。<br>另外，000718.sz，这里深证代码是 <strong>sz</strong>，上证代码是 <strong>ss</strong>，港股代码是 <strong>hk</strong>。</p>
-<h4 id="5-_如何展示获取的数据"><strong>5. 如何展示获取的数据</strong></h4><p>执行下面这句代码:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">chartSeries</span><span class="params">(df)</span></span></span><br></pre></td></tr></table></figure></p>
-<p>效果如下图。</p>
-<p><img src="http://7xl0b5.com1.z0.glb.clouddn.com/chartSeries.jpg" alt="quantmod.chartSeries"></p>
-<h4 id="6-_添加MACD、布尔带等指标"><strong>6. 添加MACD、布尔带等指标</strong></h4><p>执行完上述的画图代码后，可继续执行以下两句代码，效果分别是添加MACD、BBand。<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">addMACD()<span class="comment">;</span></span><br><span class="line">addBBands()<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
-<p>执行代码后效果如下图。<br><img src="http://7xl0b5.com1.z0.glb.clouddn.com/macd.jpg" alt="quantmod.chartSeries"></p>
-<p>关于quantmod库的更多信息，可以阅读以下材料。</p>
-<ol>
-<li><a href="http://www.quantmod.com/" target="_blank" rel="external">quantmod官方文档</a></li>
-<li><a href="http://site.douban.com/182577/widget/notes/10568316/note/299186532/" target="_blank" rel="external">构建基于R的交易系统(1)quantmod</a></li>
-</ol>
-
       
     </div>
     
@@ -234,6 +219,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/08/13/20150813.R-quantmod-lib/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
