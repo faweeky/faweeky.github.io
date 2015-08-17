@@ -17,7 +17,7 @@ p">
 
 items.py： 定义需要从网页中提取的结构化数据类item，并提供对结构化数据的键-值对访问。
 p">
-<meta property="og:updated_time" content="2015-08-17T01:53:54.148Z">
+<meta property="og:updated_time" content="2015-08-17T01:54:40.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于scrapy构建百科爬虫">
 <meta name="twitter:description" content="1. scrapyScrapy是基于python开发的一个快速web抓取框架，用于抓取web站点页面并从中提取结构化的数据。基于scrapy提供的框架，可以快速编写具有基本功能的爬虫，同时，通过继承并扩展scrapy提供的不同爬虫类，可以快速构建功能强大高效的爬虫。scrapy中重要的文件有：
@@ -218,6 +218,7 @@ p">
 <li>pipelines.py: 定义提取出item后的处理流程。每个pipeline收到一个item，再对其进行处理。多个pipeline可以进行串联。例如：可以进行数据进一步清洗、正确性校验、重复性校验还有数据持久化。</li>
 <li>spiders.py：定义爬虫。包括获取(crawl)和解析(parse)网页的函数。</li>
 </ol>
+<a id="more"></a>
 <h4 id="2-_定义提取的数据BaikeItem"><strong>2. 定义提取的数据BaikeItem</strong></h4><p>在这里定义从百度百科一个页面中提取的三类数据：百科标题名、百科第一段简介和百科链接。</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class <span class="function"><span class="title">BaikeItem</span><span class="params">(scrapy.Item)</span></span>:</span><br><span class="line">    name = scrapy.<span class="function"><span class="title">Field</span><span class="params">()</span></span></span><br><span class="line">    desc = scrapy.<span class="function"><span class="title">Field</span><span class="params">()</span></span></span><br><span class="line">    link = scrapy.<span class="function"><span class="title">Field</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
 <h4 id="3-_定义提取的爬虫BaikeSpider"><strong>3. 定义提取的爬虫BaikeSpider</strong></h4><p>scrapy中提供了几个spider基类，basespider, CrawlSpider, XMLFeedSpider, CVSFeedSpider等。<br>CrawlSpider中提供了Rule的概念，用于提取链接。每个Rule的定义为：<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class scrapy.spiders.<span class="keyword">Rule</span>(link_extractor, callback=None, cb_kwargs=None, follow=None, process_links=None, process_request=None)</span><br></pre></td></tr></table></figure></p>
