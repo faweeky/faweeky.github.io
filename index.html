@@ -193,7 +193,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-_scrapy"><strong>1. scrapy</strong></h4><p>Scrapy是基于python开发的一个快速web抓取框架，用于抓取web站点页面并从中提取结构化的数据。<br>基于scrapy提供的框架，可以快速编写具有基本功能的爬虫，同时，通过继承并扩展scrapy提供的不同爬虫类，可以快速构建功能强大高效的爬虫。<br>scrapy中重要的文件有：</p>
+        <p><strong>1. scrapy</strong><br>Scrapy是基于python开发的一个快速web抓取框架，用于抓取web站点页面并从中提取结构化的数据。<br>基于scrapy提供的框架，可以快速编写具有基本功能的爬虫，同时，通过继承并扩展scrapy提供的不同爬虫类，可以快速构建功能强大高效的爬虫。<br>scrapy中重要的文件有：</p>
 <ol>
 <li>items.py： 定义需要从网页中提取的结构化数据类item，并提供对结构化数据的<strong>键-值对</strong>访问。</li>
 <li>pipelines.py: 定义提取出item后的处理流程。每个pipeline收到一个item，再对其进行处理。多个pipeline可以进行串联。例如：可以进行数据进一步清洗、正确性校验、重复性校验还有数据持久化。</li>
