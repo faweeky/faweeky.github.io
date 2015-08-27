@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/R语言/" style="font-size: 10px;">R语言</a> <a href="/tags/duoshuo/" style="font-size: 10px;">duoshuo</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/quantmod/" style="font-size: 10px;">quantmod</a> <a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a>
+						<a href="/tags/R语言/" style="font-size: 10px;">R语言</a> <a href="/tags/duoshuo/" style="font-size: 10px;">duoshuo</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/quantmod/" style="font-size: 10px;">quantmod</a> <a href="/tags/scrapy/" style="font-size: 20px;">scrapy</a> <a href="/tags/xa0/" style="font-size: 10px;">xa0</a>
 					</div>
 				</section>
 				
@@ -166,6 +166,66 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="title-20150827-Encode-error-scrapy" class="article article-type-title" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/17/20150827-Encode-error-scrapy/" class="article-date">
+  	<time datetime="2015-08-17T01:52:41.000Z" itemprop="datePublished">2015-08-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/17/20150827-Encode-error-scrapy/">Scrapy抓取网页编码错误&#39;\xa0&#39;的解决办法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>通过scrapy抓取网页时，经常在网页中看到’\xa0’字符。表示的是html代码中的&nbmp;，表示空格。</p>
+<p>这个字符在转换成gbk编码时会出现问题。</p>
+<p>例如在print时报错：</p>
+<figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">UnicodeEncodeError</span>: <span class="symbol">'gbk'</span> codec can't encode character u'\xa0' <span class="keyword">in</span> position <span class="number">1001</span>: illegal multibyte sequence</span><br></pre></td></tr></table></figure>
+<p>所以我们在转换之前，必须替换掉这个字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string.replace(<span class="string">u'\xa0'</span>, <span class="string">u' '</span>)  </span><br><span class="line">将<span class="string">'\xa0‘替换成u'</span> <span class="string">'空格。</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encoding/">encoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/">scrapy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xa0/">xa0</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="title-20150817-Scrapy-BaikeSpider-md" class="article article-type-title" itemscope itemprop="blogPost">
   

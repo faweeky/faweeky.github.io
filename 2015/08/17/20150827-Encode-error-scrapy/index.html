@@ -3,17 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | 猫叔的博客</title>
+  <title>Scrapy抓取网页编码错误&#39;\xa0&#39;的解决办法 | 猫叔的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="读书，写字，跑步还有其他">
-<meta property="og:type" content="website">
-<meta property="og:title" content="猫叔的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="通过scrapy抓取网页时，经常在网页中看到’\xa0’字符。表示的是html代码中的&amp;nbmp;，表示空格。
+这个字符在转换成gbk编码时会出现问题。
+例如在print时报错：
+1UnicodeEncodeError: &apos;gbk&apos; codec can&apos;t encode character u&apos;\xa0&apos; in position 1001: illegal multibyte sequence
+所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scrapy抓取网页编码错误'\xa0'的解决办法">
+<meta property="og:url" content="http://yoursite.com/2015/08/17/20150827-Encode-error-scrapy/index.html">
 <meta property="og:site_name" content="猫叔的博客">
-<meta property="og:description" content="读书，写字，跑步还有其他">
+<meta property="og:description" content="通过scrapy抓取网页时，经常在网页中看到’\xa0’字符。表示的是html代码中的&amp;nbmp;，表示空格。
+这个字符在转换成gbk编码时会出现问题。
+例如在print时报错：
+1UnicodeEncodeError: &apos;gbk&apos; codec can&apos;t encode character u&apos;\xa0&apos; in position 1001: illegal multibyte sequence
+所">
+<meta property="og:updated_time" content="2015-08-27T08:56:11.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="猫叔的博客">
-<meta name="twitter:description" content="读书，写字，跑步还有其他">
+<meta name="twitter:title" content="Scrapy抓取网页编码错误'\xa0'的解决办法">
+<meta name="twitter:description" content="通过scrapy抓取网页时，经常在网页中看到’\xa0’字符。表示的是html代码中的&amp;nbmp;，表示空格。
+这个字符在转换成gbk编码时会出现问题。
+例如在print时报错：
+1UnicodeEncodeError: &apos;gbk&apos; codec can&apos;t encode character u&apos;\xa0&apos; in position 1001: illegal multibyte sequence
+所">
   
     <link rel="alternative" href="/atom.xml" title="猫叔的博客" type="application/atom+xml">
   
@@ -165,173 +178,108 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="title-20150827-Encode-error-scrapy" class="article article-type-title" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-title">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/17/20150827-Encode-error-scrapy/" class="archive-article-date">
-  	<time datetime="2015-08-17T01:52:41.000Z" itemprop="datePublished">Aug 17</time>
+    <div class="article-meta">
+      <a href="/2015/08/17/20150827-Encode-error-scrapy/" class="article-date">
+  	<time datetime="2015-08-17T01:52:41.000Z" itemprop="datePublished">2015-08-17</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/17/20150827-Encode-error-scrapy/">Scrapy抓取网页编码错误&#39;\xa0&#39;的解决办法</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Scrapy抓取网页编码错误&#39;\xa0&#39;的解决办法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encoding/">encoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/">scrapy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xa0/">xa0</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-title">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/17/20150817-Scrapy-BaikeSpider-md/" class="archive-article-date">
-  	<time datetime="2015-08-17T01:52:41.000Z" itemprop="datePublished">Aug 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/17/20150817-Scrapy-BaikeSpider-md/">基于scrapy构建百科爬虫</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>通过scrapy抓取网页时，经常在网页中看到’\xa0’字符。表示的是html代码中的&nbmp;，表示空格。</p>
+<p>这个字符在转换成gbk编码时会出现问题。</p>
+<p>例如在print时报错：</p>
+<figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">UnicodeEncodeError</span>: <span class="symbol">'gbk'</span> codec can't encode character u'\xa0' <span class="keyword">in</span> position <span class="number">1001</span>: illegal multibyte sequence</span><br></pre></td></tr></table></figure>
+<p>所以我们在转换之前，必须替换掉这个字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string.replace(<span class="string">u'\xa0'</span>, <span class="string">u' '</span>)  </span><br><span class="line">将<span class="string">'\xa0‘替换成u'</span> <span class="string">'空格。</span></span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/">scrapy</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/17/20150817-Scrapy-BaikeSpider-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于scrapy构建百科爬虫</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-title">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/13/20150813.R-quantmod-lib/" class="archive-article-date">
-  	<time datetime="2015-08-13T04:28:41.000Z" itemprop="datePublished">Aug 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/13/20150813.R-quantmod-lib/">利用R语言的quantmod包获取并展示股票数据</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/R语言/">R语言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/quantmod/">quantmod</a></li></ul>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="20150827-Encode-error-scrapy" data-title="Scrapy抓取网页编码错误&#39;\xa0&#39;的解决办法" data-url="http://yoursite.com/2015/08/17/20150827-Encode-error-scrapy/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"faweeky"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/10/20150810.duoshuo-plugin/" class="archive-article-date">
-  	<time datetime="2015-08-10T07:36:47.000Z" itemprop="datePublished">Aug 10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/10/20150810.duoshuo-plugin/">在hexo博客里安装duoshuo评论插件</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/duoshuo/">duoshuo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/07/20150807.Startup/" class="archive-article-date">
-  	<time datetime="2015-08-07T07:36:47.000Z" itemprop="datePublished">Aug 7</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/07/20150807.Startup/">我的第一篇日志</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 </div>
       <footer id="footer">
@@ -357,8 +305,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
